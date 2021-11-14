@@ -181,7 +181,7 @@ class BMP388(object):
         adc_P = (msb << 16) + (lsb << 8) + (xlsb)
         pressure = self.compensate_pressure(adc_P)
         altitude  = 4433000 * (1 - pow(((pressure/100.0) / 101325.0), 0.1903))
-        alt_meters = altitude / 1.094
+        alt_meters = ((altitude / 1.094) + 15)
 
         return temperature,pressure,alt_meters
 
