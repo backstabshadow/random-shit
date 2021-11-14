@@ -196,7 +196,7 @@ if __name__ == '__main__':
         while True:
             time.sleep(0.5)
             temperature,pressure,alt_meters = bmp388.get_temperature_and_pressure_and_altitude()
-            print(' Temperature = %.1f Pressure = %.2f  Altitude =%.2f '%(temperature/100.0,pressure/100.0,altitude/100.0))
+            print(' Temperature = %.1f Pressure = %.2f  Altitude =%.2f '%(temperature/100.0,pressure/100.0,alt_meters/100.0))
     except IOError as e:
         print("IO error detected")
         print(e)
