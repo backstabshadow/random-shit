@@ -181,7 +181,7 @@ class BMP388(object):
         adc_P = (msb << 16) + (lsb << 8) + (xlsb)
         pressure = self.compensate_pressure(adc_P)
         altitude  = 4433000 * (1 - pow(((pressure/100.0) / 101325.0), 0.1903))
-        alt_meters = ((altitude / 1.094) + 15)
+        alt_meters = (altitude / 1.094) + 15
 
         return temperature,pressure,alt_meters
 
@@ -198,7 +198,7 @@ if __name__ == '__main__':
             time.sleep(0.5)
             time_after += 0.5
             temperature,pressure,alt_meters = bmp388.get_temperature_and_pressure_and_altitude()
-            print(f'({time_after}) Seconds After Launch: Temperature = %.1f Pressure = %.2f  Altitude =%.2f '%(temperature/100.0,pressure/100.0,alt_meters/100.0))
+            print( time_after 'Seconds After Launch: Temperature = %.1f Pressure = %.2f  Altitude =%.2f '%(temperature/100.0,pressure/100.0,alt_meters/100.0))
     except IOError as e:
         print("IO error detected")
         print(e)
