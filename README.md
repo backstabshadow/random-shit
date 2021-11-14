@@ -1,3 +1,3 @@
-# random-shit
+# random-shit/other-random-shit
 
-# my collection of random shit
+# random shit that isnt really categorized
