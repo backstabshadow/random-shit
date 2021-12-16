@@ -1,3 +1,3 @@
-# random-shit/other-random-shit
+# dead-projects/other
 
-# random shit that isnt really categorized
+## dead projects that are so small they dont even get a branch
